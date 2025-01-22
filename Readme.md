@@ -2,7 +2,7 @@
 It contains 4 parts.
 User Authentication: Register and log in users.
 Product Management: Add, update, and retrieve product data.
-Order Handling: Manage customer orders. Each API endpoint will interact with the database and serve data in a structured format (typically JSON). User Authentication: Register and log in users. Product Management: Add, update, and retrieve product data. Order Handling: Manage customer orders. Each API endpoint will interact with the database and serve data in a structured format (typically JSON).\
+Order Handling: Manage customer orders. Each API endpoint will interact with the database and serve data in a structured format (typically JSON). User Authentication: Register and log in users. Product Management: Add, update, and retrieve product data. Order Handling: Manage customer orders. Each API endpoint will interact with the database and serve data in a structured format (typically JSON).
 
 
 Project Overview:- 
@@ -29,4 +29,4 @@ New Feature Added:
 
 -->Technologies Used: React (Frontend) Tailwind CSS (Styling) React Router (Routing) Express.js (Backend) Stripe/PayPal (Payment Gateway)
 
--->Installation & Setup: Clone the repository. Run npm install to install dependencies. Start the development server with npm start
+-->Installation & Setup: Clone the repository. Run npm install to install dependencies. Start the development server with npm start.
