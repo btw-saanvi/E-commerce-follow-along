@@ -130,3 +130,20 @@ This Node.js application demonstrates user creation, file uploads using Multer, 
       Password Confirmation (must match password)
 
 4. Used React Router for navigation.
+
+# Milestone 6: User Authentication with Password Encryption
+
+## Overview
+
+In this project, we focus on two key aspects of user authentication:
+
+1. **Encrypting the Password**: Hash the user's password during the signup process using bcrypt to ensure it's stored securely.
+2. **Saving User Data**: Store the user's data (e.g., name, email, etc.) in the database, ensuring the password remains encrypted.
+
+## Features
+
+- **Password Encryption**: Uses bcrypt to securely hash and store passwords.
+- **Secure User Storage**: Stores user information (name, email, etc.) in the database with encrypted passwords.
+- **Database Integration**: Ensures all user data is stored following security best practices.
+
+
