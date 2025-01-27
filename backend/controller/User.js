@@ -1,10 +1,12 @@
 const express = require('express');
 const path = require('path');
-const User = require('../model/User');
+const User = require('../model/user');
 const router = express.Router();
 const {upload}=require('../multer');
 const ErrorHandler = require('../utils/ErrorHandler');
-
+const catchAsyncErrors = require('../middleware/catchAsyncErrors');
+const jwt = require('jsonwebtoken');
+const sendMail = require('../utils/sendEmail');
 //create user
 router.post(
     "/create-user",
