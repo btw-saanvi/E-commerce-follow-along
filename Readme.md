@@ -146,4 +146,13 @@ In this project, we focus on two key aspects of user authentication:
 - **Secure User Storage**: Stores user information (name, email, etc.) in the database with encrypted passwords.
 - **Database Integration**: Ensures all user data is stored following security best practices.
 
+# Milestone 7:The Login Endpoint
 
+## Overview
+
+This guide covers how to implement a user login endpoint that accepts user credentials (email/username and password), validates the credentials against a database, and uses bcrypt to hash the entered password for secure authentication.
+
+## Features
+Accepts login credentials (email/username and password) from the user.
+Retrieves user information from the database using the provided credentials.
+Uses bcrypt for hashing and comparing passwords securely
