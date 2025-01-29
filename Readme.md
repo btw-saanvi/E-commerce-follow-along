@@ -156,3 +156,21 @@ This guide covers how to implement a user login endpoint that accepts user crede
 Accepts login credentials (email/username and password) from the user.
 Retrieves user information from the database using the provided credentials.
 Uses bcrypt for hashing and comparing passwords securely
+
+# Milestone 8: Product Card Component
+
+## Overview
+
+In Milestone 8, we focus on creating a reusable product card component and designing a homepage to display a collection of these cards. Each card will showcase key product details, such as the product's name, price, and image. The goal is to create a clean and organized layout that improves the user experience and allows for easy browsing of products. This milestone demonstrates the principles of component-based design and how to efficiently manage dynamic content within your app.
+
+## Features
+
+**Reusable Product Card:** A single card component that accepts dynamic product details as props and renders them in a uniform, visually appealing way. The product card includes:
+
+1. Product name
+2. Product image
+3. Product price
+
+**Dynamic Rendering:** Use of JavaScript array mapping to iterate through a list of products and dynamically render each product's card with its respective data.
+**Homepage Layout:** A structured layout, designed using either CSS Grid or Flexbox, to display multiple cards on the homepage in a responsive, organized manner.
+**Consistent Design:** The card component ensures that the product details are presented consistently across all cards, providing a seamless user experience
