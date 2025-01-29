@@ -1,11 +1,19 @@
-import React from 'react'
-import Login from '../components/auth/login'
-function LoginPage() {
-    return(
-        <div>
-            <Login/>
-        </div>
-    )
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import { LoginPage,SignupPage,HomePage } from "./routes.jsx"
+
+import './App.css';
+
+function App(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/Login" element={<LoginPage/>}/>
+        <Route path="/signup" element={<SignupPage/>}/>
+        <Route path="/Home" element={<HomePage/>}/>
+
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default LoginPage;
+export default App;
