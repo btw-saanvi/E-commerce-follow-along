@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
-import { LoginPage,SignupPage,HomePage,CreateProduct, MyProducts } from "./routes.jsx"
+import { LoginPage,SignupPage,HomePage,CreateProduct,MyProducts} from "./routes.jsx"
 
 import './App.css';
 
