@@ -332,3 +332,11 @@ Use fetch or Axios to call the backend endpoint.
 Display the Products Dynamically
 
 Pass the fetched data to a ProductCard component for rendering.
+
+### Milestone 13: Menu Management System
+This project is an extension of a backend system to manage a restaurant's online menu. It includes features to update and delete menu items in a MongoDB database. The frontend will have an edit button to enable users to update menu items.
+
+# Features
+1. Update Menu Items: Update existing data in MongoDB via an API.
+2. Frontend Integration: Edit menu items through an interactive form.
+3. Error Handling: Validation for incoming data with descriptive error messages.
