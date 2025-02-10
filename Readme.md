@@ -340,3 +340,13 @@ This project is an extension of a backend system to manage a restaurant's online
 1. Update Menu Items: Update existing data in MongoDB via an API.
 2. Frontend Integration: Edit menu items through an interactive form.
 3. Error Handling: Validation for incoming data with descriptive error messages.
+
+### Milestone 14: Delete Operation in MongoDB 📝
+
+This milestone focuses on implementing a DELETE operation to remove data from MongoDB using a product's unique ID. The frontend will feature a Delete Button on each product card. Clicking the button sends the product's ID to the backend server to delete it from the database.
+
+# Features
+
+1. Delete Menu Items: Remove specific menu items from the MongoDB database using their unique IDs.
+2. Frontend Integration: Enable users to delete products with a single click.
+3. Error Handling: Handle cases where the ID is invalid or the item does not exist.
