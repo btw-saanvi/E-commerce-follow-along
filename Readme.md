@@ -350,3 +350,27 @@ This milestone focuses on implementing a DELETE operation to remove data from Mo
 1. Delete Menu Items: Remove specific menu items from the MongoDB database using their unique IDs.
 2. Frontend Integration: Enable users to delete products with a single click.
 3. Error Handling: Handle cases where the ID is invalid or the item does not exist.
+
+### Milestone 15:Responsive Navbar Components
+
+# Overview
+
+This project includes the creation of a responsive navigation bar component (Nav component) that provides smooth navigation across multiple pages within the application. The Nav component will contain links to the following pages:
+
+1. Home
+
+2. My Products
+
+3. Add Product
+
+4. Cart
+
+**The navigation bar will be designed to adapt seamlessly to all screen sizes, ensuring an optimal user experience across devices. The Nav component will be added to all pages, facilitating easy and intuitive navigation throughout the application.**
+
+# Features
+
+1. Responsive navigation bar that adjusts to different screen sizes.
+
+2. Smooth navigation between pages.
+
+3. A user-friendly interface for accessing different sections of the application.

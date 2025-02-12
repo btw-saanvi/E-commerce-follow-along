@@ -117,7 +117,8 @@ router.get('/my-products', async (req, res) => {
 });
 
 router.get('/product/:id', async (req, res) => {
-  const { id } = req.params;
+  console.log("Fetching products....")
+  const { id } = req.params;con
   try {
       const product = await Product.findById(id);
       if (!product) {
