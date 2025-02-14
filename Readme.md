@@ -395,3 +395,22 @@ This project includes the creation of a responsive navigation bar component (Nav
 6. Responsive UI for seamless experience across devices.
 
 7. Environment variable support for API integration.
+
+### Milestone 17: Cart Functionality Implementation
+
+# Overview
+
+**In this milestone, we will be implementing the cart functionality in our project. This includes designing a schema to store cart products and creating an endpoint to receive and store product details in the cart.**
+
+# Features
+
+1. Cart Schema: A database schema to manage products in the cart.
+
+2. API Endpoint: An endpoint to add products to the cart.
+
+3. Data Storage: Store product details such as name, price, quantity, and user reference.
+
+4. Efficient Retrieval: Ability to fetch cart data for a specific user.
+
+5. Validation: Ensure valid product details before storing.
+
