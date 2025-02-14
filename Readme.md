@@ -414,3 +414,19 @@ This project includes the creation of a responsive navigation bar component (Nav
 
 5. Validation: Ensure valid product details before storing.
 
+## Milestone 18:
+
+### *Overview*  
+Milestone 18 focuses on implementing a backend API to manage the cart system in an e-commerce application. This includes retrieving products inside a user's cart, ensuring efficient cart management and a seamless shopping experience.  
+
+### *Features*
+
+- *Fetch Cart Items:* Retrieve all products added to a user's cart. 
+
+- *MongoDB Integration:* Store and manage cart data efficiently.  
+
+- *REST API Support:* Simple and structured API endpoints.  
+
+- *Scalability:* Designed for easy expansion with additional features like cart updates and deletion.
+  
+- *Secure & Optimized:* Ensures reliable data fetching with proper error handling.
