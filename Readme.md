@@ -430,3 +430,22 @@ Milestone 18 focuses on implementing a backend API to manage the cart system in 
 - *Scalability:* Designed for easy expansion with additional features like cart updates and deletion.
   
 - *Secure & Optimized:* Ensures reliable data fetching with proper error handling.
+
+# Ecommerce Website - Milestone 19: Functional Cart
+## Overview
+In Milestone 19, the functional cart feature was implemented on the Ecommerce website. This milestone focuses on providing users with an intuitive and seamless way to add products to their cart and view them dynamically within the cart page. The cart updates in real-time as products are added, creating an interactive shopping experience.
+
+## Key Features
+### Add to Cart: Users can add products to their cart with a simple click, and the cart will automatically update to reflect the added item.
+### Product Display in Cart: After adding items, the cart displays the products with relevant details such as product name, image, and price.
+### Dynamic Cart: As products are added, the cart updates dynamically, ensuring that users can easily review their selections.
+
+
+# Ecommerce Website - Milestone 20: Profile Page
+## Overview
+In Milestone 20, we have implemented a Profile Page for the Ecommerce website. This page allows users to view and manage their personal information, including their name, email, and order history. The profile page enhances the user experience by providing a dedicated space to access and update their account details.
+
+## Key Features
+### User Information Display: Users can view their profile information, such as their name and email address, on the profile page.
+### Order History: A section where users can view their past orders, including order details like product names, quantities, and prices.
+### Edit Profile: The profile page includes an option to edit personal information, offering users a way to keep their account details up to date.
