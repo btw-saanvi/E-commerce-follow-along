@@ -463,3 +463,10 @@ Create a frontend form to collect and store address details, including country, 
 1. Build the address form page.
 2. Store input values in state.
 3. Navigate to this form when clicking "Add Address" in the profile.
+
+### Milestone 22 - Address Handling API Endpoint
+
+# Overview
+
+In this milestone, we will create an API endpoint that allows users to submit their address from the frontend. The submitted address will be added to the address array inside the user collection in our database.
+
