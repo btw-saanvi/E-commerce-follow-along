@@ -468,5 +468,15 @@ Create a frontend form to collect and store address details, including country, 
 
 # Overview
 
-In this milestone, we will create an API endpoint that allows users to submit their address from the frontend. The submitted address will be added to the address array inside the user collection in our database.
+### Milestone 23: Implementing Order Placement
 
+Overview
+
+In this milestone, we will enhance the ordering functionality by adding a "Place Order" button inside the cart. When a user clicks this button, they will be redirected to a "Select Address" page, where they can choose a delivery address. We will also implement a backend endpoint to fetch and display user addresses and create a Mongoose schema for storing order details.
+
+ **Learning Goals 🎯**
+By the end of this milestone, you will:
+✅ Add a "Place Order" button inside the cart page.
+✅ Create a "Select Address" page that displays available addresses and allows users to select a delivery address.
+✅ Implement a backend endpoint to retrieve user addresses.
+✅ Write a Mongoose schema to store order details.

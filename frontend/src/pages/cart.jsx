@@ -1,89 +1,64 @@
-import React, { useState, useEffect } from "react";
-import { IoIosAdd } from "react-icons/io";
-import { IoIosRemove } from "react-icons/io";
+// Cart.jsx
+import React, { useState, useEffect } from 'react';
+import CartProduct from '../components/auth/CartProduct';
+import NavBar from '../components/auth/nav';
+import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
 
-export default function CartProduct({ _id, name, images, quantity, price }) {
-	const [currentIndex, setCurrentIndex] = useState(0);
-	const [quantityVal, setQuantityVal] = useState(quantity);
+const Cart = () => {
 
-	useEffect(() => {
-		if (!images || images.length === 0) return;
-		const interval = setInterval(() => {
-			setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-		}, 2000);
-		return () => clearInterval(interval);
-	}, [images]);
+  const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // Initialize navigatea
 
-	const handleIncrement = () => {
-		const newquantityVal = quantityVal + 1;
-		setQuantityVal(newquantityVal);
-		updateQuantityVal(newquantityVal);
-	};
+  useEffect(() => {
+    fetch(`http://localhost:8000/api/v2/product/cartproducts?email=${'saanvi.garg@kalvium.community'}`)
 
-	const handleDecrement = () => {
-		const newquantityVal = quantityVal > 1 ? quantityVal - 1 : 1;
-		setQuantityVal(newquantityVal);
-		updateQuantityVal(newquantityVal);
-	};
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setProducts(data.cart.map(product => ({ quantity: product['quantity'], ...product['productId'] })));
+        console.log("Products fetched:", data.cart);
+      })
+      .catch((err) => {
+        console.error("Error fetching products:", err);
+      });
+  }, []);
+    
+      console.log("Products:", products);
 
-	const updateQuantityVal = (quantity) => {
-		fetch('http://localhost:8000/api/v2/product/cartproduct/quantity', {
-			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				email: 'saanvi.garg@kalvium.community',
-				productId: _id,
-				quantity,
-			}),
-		})
-			.then((res) => {
-				if (!res.ok) {
-					throw new Error(`HTTP error! status: ${res.status}`);
-				}
-				return res.json();
-			})
-			.then((data) => {
-				console.log('quantityVal updated:', data);
-			})
-			.catch((err) => {
-				console.error('Error updating quantityVal:', err);
-			});
-	};
+      const handlePlaceOrder = () => {
+        navigate('/select-address'); // Navigate to the Select Address page
+      };
 
-	const currentImage = images && images.length > 0 ? images[currentIndex] : "";
-	return (
-		<div className="h-max w-full p-4 flex justify-between border-b border-neutral-300 bg-neutral-100 rounded-lg">
-			<div className="flex flex-col gap-y-2">
-				<img
-					src={`http://localhost:8000${currentImage}`} // Ensure the URL is correct\
-					alt={name}
-					className="w-32 h-32 object-cover rounded-lg border border-neutral-300"
-				/>
-			</div>
-			<div className="w-full flex flex-col justify-start items-start md:flex-row md:justify-between md:items-center px-4">
-				<p className="text-lg font-semibold">{name}</p>
-				<p className="text-lg font-semibold">${price * quantityVal}</p>
-				<div className="hidden md:flex flex-row items-center gap-x-2 ">
-					<div
-						onClick={handleIncrement}
-						className="flex justify-center items-center bg-gray-200 hover:bg-gray-300 active:translate-y-1 p-2 rounded-xl cursor-pointer"
-					>
-						<IoIosAdd />
-					</div>
-					<div className="px-5 py-1 text-center bg-gray-100 rounded-xl pointer-events-none">
-						{quantityVal}
-					</div>
-					<div
-						onClick={handleDecrement}
-						className="flex justify-center items-center bg-gray-200 hover:bg-gray-300 active:translate-y-1 p-2 rounded-xl cursor-pointer"
-					>
-						<IoIosRemove />
-					</div>
-				</div>
-			</div>
-
-		</div>
-	);
+      return (
+        <div className='w-full h-screen'>
+          <NavBar />
+          <div className='w-full h-full justify-center items-center flex'>
+            <div className='w-full md:w-4/5 lg:w-4/6 2xl:w-2/3 h-full border-l border-r border-neutral-300 flex flex-col'>
+              <div className='w-full h-16 flex items-center justify-center'>
+                <h1 className='text-2xl font-semibold'>Cart</h1>
+              </div>
+              <div className='w-full flex-grow overflow-auto px-3 py-2 gap-y-2'>
+                {products.map(product => (
+                  <CartProduct key={product._id} {...product} />
+                ))}
+              </div>
+              {/* Place Order Button */}
+              <div className='w-full p-4 flex justify-end'>
+                <button
+                  onClick={handlePlaceOrder}
+                  className='bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600'
+                >
+                  Place Order
+                </button>
+              </div>
+            </div>
+            </div>
+    </div>
+  );
 }
+
+export default Cart;
