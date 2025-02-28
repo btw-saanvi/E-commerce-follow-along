@@ -480,3 +480,9 @@ By the end of this milestone, you will:
 ✅ Create a "Select Address" page that displays available addresses and allows users to select a delivery address.
 ✅ Implement a backend endpoint to retrieve user addresses.
 ✅ Write a Mongoose schema to store order details.
+
+### Steps for Milestone 24 📝
+1️⃣ Display Ordered Products – Show a list of all products in the order, including images, names, prices, and quantities.
+2️⃣ Show Delivery Address – Display the user's selected shipping address.
+3️⃣ Calculate and Display Total Price – Show a breakdown of the subtotal, shipping fees (if any), and the final total amount.
+4️⃣ Implement "Place Order" Button – Add a button that allows users to confirm their purchase and proceed to the next step.
