@@ -85,7 +85,7 @@ const OrderConfirmation = () => {
             };
             // Send POST request to place orders
             const response = await axios.post('http://localhost:8000/api/v2/orders/place-order', payload);
-            console.log('Orders placed successfully:', response.data);
+            console.log('Orders placed successfully.....:', response.data);
 
             // Navigate to an order success page or display a success message
             navigate('/order-success'); // Adjust route as needed
