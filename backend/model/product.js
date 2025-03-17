@@ -23,7 +23,7 @@ const productSchema = new mongoose.Schema(
     },
     stock: {
       type: Number,
-      required: [true, "Please provide the product stock"],
+      required: [true, "Please provide the product stock..."],
     },
     email: {
       type: String,
